@@ -1,0 +1,168 @@
+﻿@model IEnumerable<ProjetoModeloDDD.MVC.ViewModels.ClienteViewModel>
+
+@{
+    Layout = null;
+    ViewBag.Title = "GraficoClientes";
+}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+
+
+
+<figure class="highcharts-figure-c">
+    <div id="container-c"></div>
+    <p class="highcharts-description">
+    </p>
+</figure>
+
+
+
+
+
+<style>
+
+
+
+    .highcharts-figure-c,
+    .highcharts-data-table table {
+        min-width: 390px;
+        max-width: 800px;
+        margin-top: 20px;
+        border-radius: 2%;
+    }
+
+    .container-c {
+        width: 90%;
+        height: 400px;
+       
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #ebebeb;
+        border-radius: 2%;
+        text-align: center;
+        width: 40%;
+        max-width: 300px;
+    }
+
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+        border-radius: 2%;
+    }
+
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+        border-radius: 2%;
+    }
+
+    input[type="number"] {
+        min-width: 50px;
+    }
+</style>
+<script>
+
+        let numClientes = 0;
+        let numAtivos = 0;
+        let numNaoAtivos = 0;
+
+        @{
+
+            var nuClientes = 0;
+            var nuAtivos = 0;
+            var nuNaoAtivos = 0;
+
+            foreach (var item in Model)
+            {
+
+                nuClientes = nuClientes + 1;
+
+                if (item.Ativo == true)
+                {
+                    nuAtivos = nuAtivos + 1;
+                }
+                else
+                {
+                    nuNaoAtivos = nuNaoAtivos + 1;
+                }
+
+            }
+
+        }
+
+        numClientes = '@nuClientes';
+        numAtivos = '@nuAtivos';
+        numNaoAtivos = '@nuNaoAtivos'
+
+        let pt = numClientes / 100;
+        let pa = numAtivos / pt;
+        let pna = numNaoAtivos / pt;
+
+
+        Highcharts.chart('container-c', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Gráfico de Clientes Ativos',
+                align: 'left'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Ativos',
+                    y: pa,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Não Ativos',
+                    y: pna
+                },]
+            }]
+        });
+</script>

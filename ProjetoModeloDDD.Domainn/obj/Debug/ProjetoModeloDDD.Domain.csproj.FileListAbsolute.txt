@@ -1,0 +1,12 @@
+C:\Users\Filipe\Documents\Projetos\MVC\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\bin\Debug\ProjetoModeloDDD.Domainn.dll
+C:\Users\Filipe\Documents\Projetos\MVC\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\bin\Debug\ProjetoModeloDDD.Domainn.pdb
+C:\Users\Filipe\Documents\Projetos\MVC\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domain.csproj.AssemblyReference.cache
+C:\Users\Filipe\Documents\Projetos\MVC\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Filipe\Documents\Projetos\MVC\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domainn.dll
+C:\Users\Filipe\Documents\Projetos\MVC\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domainn.pdb
+C:\Users\Filipe\Documents\Projetos\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\bin\Debug\ProjetoModeloDDD.Domainn.dll
+C:\Users\Filipe\Documents\Projetos\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\bin\Debug\ProjetoModeloDDD.Domainn.pdb
+C:\Users\Filipe\Documents\Projetos\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domain.csproj.AssemblyReference.cache
+C:\Users\Filipe\Documents\Projetos\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Filipe\Documents\Projetos\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domainn.dll
+C:\Users\Filipe\Documents\Projetos\ProjetoModeloDDD\ProjetoModeloDDD.Domainn\obj\Debug\ProjetoModeloDDD.Domainn.pdb

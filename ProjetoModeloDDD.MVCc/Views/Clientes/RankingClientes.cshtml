@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ProjetoModeloDDD.MVC.ViewModels.ClienteViewModel>
+
+@{
+    Layout = null;
+    ViewBag.Title = "RankingClientes";
+}
+
+<script>
+
+    var list = [];
+    var listNomes = [];
+    var indexJS = 0;
+    @{
+    for (int i = 0; i < Model.Count(); i++)
+    {
+            @:(list[indexJS] = { "nome": '@Model.ElementAtOrDefault(i).Nome'});
+            @:(indexJS++);
+    }
+        List<string> teste = new List<string>();
+    }
+
+
+
+    list.forEach(function (item) {
+        listNomes.push(item.nome);
+    });
+
+    console.log(listNomes);
+
+    @teste = listNomes;
+
+
+</script>
+
+<div class="container_clientes_ranking ">
+
+    <div class="title_principal">
+        <h1>Ranking de Clientes <br />que mais compram</h1>
+    </div>
+
+   
+        @{
+            var cont = 1;
+            foreach (var item in Model)
+            {
+
+
+                <div id="item">
+                    <div class="title">
+                        <h1>@cont º</h1>
+                    </div>
+                    <div class="cliente">
+                        <b>@Html.DisplayFor(modelItem => item.Nome)</b> 
+                    </div>
+                </div>
+
+                cont = cont + 1;
+            }
+        }
+   
+
+
+
+</div>
+
+
+<style>
+    .container_clientes_ranking {
+        background-color: white;
+        width: 82%;
+        height: 110px;
+        border-radius: 5%;
+        align-items: center;
+        text-align: center;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .cliente {
+        color: dodgerblue;
+        font-size: 110%;
+       
+    }
+   
+</style>
